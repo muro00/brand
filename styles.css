@@ -7,7 +7,12 @@ body, html {
     font-family: 'Pretendard','Noto Sans',sans-serif;
 }
 
+#fullpage {
+    height: 100%;
+}
+
 .section {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
