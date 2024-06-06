@@ -1,0 +1,36 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Pretendard','Noto Sans',sans-serif;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    text-align: center;
+}
+
+#section1 {
+    background-color: #ffadad;
+}
+
+#section2 {
+    background-color: #ffd6a5;
+}
+
+#section3 {
+    background-color: #fdffb6;
+}
+
+/* 모바일 대응 스타일 */
+@media (max-width: 768px) {
+    .section {
+        font-size: 1.5em;
+        padding: 20px;
+    }
+}
