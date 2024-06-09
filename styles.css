@@ -19,6 +19,10 @@ body, html {
     font-size: 2em;
     text-align: center;
 }
+.section p{
+    font-size:1.5em;
+    font-weight: 300;
+}
 
 #section1 {
     background-color: #ffadad;
@@ -37,5 +41,8 @@ body, html {
     .section {
         font-size: 1.5em;
         padding: 20px;
+    }
+    .section p{
+        font-size:1em;
     }
 }
