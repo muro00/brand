@@ -15,16 +15,20 @@
 <body>
     <div id="fullpage">
         <div class="section" id="section1">
-            <h1>H-All</h1>
-						<p>Homuro covered All field of Home</p>
+          <div class="textbox">
+            <h1>H.All</h1>
+            <span><strong>Homuro</strong> covered All field of Home</span>
+          </div>
         </div>
         <div class="section" id="section2">
+            <div class="textbox">
             <h1>Overview</h1>
-            <span>침구류 위주의 제품을 판매하고 있는 호무로는, 어원인 '홈으로'의 뜻에 맞춰 침구류 위주인 현재의 카테고리를 넘어, 홈 전체로의 카테고리 확장을 기획하고 있습니다. 확장에 앞서서 선행되어야 할 브랜드의 미션과 브랜드 밸류를 확립하고 보다 명확한 메시지를 우리의 고객들에게 전하고자 합니다. </span>
+            <span>침구류 위주의 제품을 판매하고 있는 호무로는, 어원인 '홈으로'의 뜻에 맞춰 침구류 위주인 현재의 카테고리를 넘어, 홈 전체로의 카테고리 확장을 기획하고 있습니다.<br>확장에 앞서서 선행되어야 할 브랜드의 미션과 브랜드 밸류를 확립하고 보다 명확한 메시지를 우리의 고객들에게 전하고자 합니다. </span>
+            </div>
         </div>
         <div class="section" id="section3">
+            <div class="textbox">
             <h1>Brand Mission</h1>
-            <p>Home Direction</p>
             <span>'홈으로' 라는 형용사는 '집으로 향하다'(Homeward) 라는 방향성을 내포하고 있습니다.<br>우리가 제시하는 방향성은 방위의 방향은 물론 방침의 방향을 가르키며, 우리는 고객들에게 홈웨어(homeware)의 새로운 방향들을 제안 할 것입니다.<br>
             <br> 집의 구성요소들을 채워 갈 때, 생각보다 많은 부분을 신경쓰고 고민해야됩니다. 호무로는 보다 먼저 고민하며, 보다 나은 해결안을 제시합니다. 이런 제안들은 우리가 고객과의 접점에서 제시해야 할 우리 브랜드의 존재 가치이자, 고객들이 호무로를 정의하게 될 모습입니다.
             <br>두터운 팬덤과 로열티는 단순히 문제해결의 요소만으로는 어려울 수 있습니다. 호무로는 우리의 고객들이 궁극적으로 얻게 될 경험적 가치에 보다 집중하여 제품들을 만들고 시장에 내놓습니다.
@@ -32,13 +36,35 @@
             <br>이상적인 Goal 을 향해 방향을 제시하는 브랜드, 호무로
             <br>가장 이상적인 홈으로, 호무로
             <br>Direction to home, Home Direction.
-
           </span>
-
+          </div>
         </div>
     </div>
+    <div id="altpage">
+      <div class="textbox"><h1>PC로 확인 가능합니다.</h1><span>Available on the PC Web</span></div>
     <!-- fullPage.js JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          function checkWidth() {
+            if ($(window).width() <= 766) {
+              $('#fullpage').hide(),
+              $('#altpage').show();
+            } else {
+              $('#fullpage').show();
+            }
+          }
+
+          // Check width on initial load
+          checkWidth();
+
+          // Check width on window resize
+          $(window).resize(function() {
+            checkWidth();
+          });
+        });
+    </script>
 </body>
 </html>
