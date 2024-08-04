@@ -50,6 +50,26 @@ body, html {
 #section13 .imgbox{ display: flex;overflow: scroll;
 
 }
+#navigation {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+#navigation button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#navigation button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
 
 
 .hide{color:#ebebeb;}

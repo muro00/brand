@@ -168,9 +168,30 @@
           </div>
         </div>
 
-    </div>
+        <!-- Navigation buttons -->
+<div id="navigation">
+  <button onclick="moveToSection(1)">1</button>
+  <button onclick="moveToSection(2)"> 2</button>
+  <button onclick="moveToSection(3)"> 3</button>
+  <button onclick="moveToSection(5)"> 4</button>
+  <button onclick="moveToSection(6)"> 5</button>
+  <button onclick="moveToSection(7)"> 6</button>
+  <button onclick="moveToSection(8)"> 7</button>
+  <button onclick="moveToSection(9)">8</button>
+  <button onclick="moveToSection(10)"> 9</button>
+<button onclick="moveToSection(11)"> 10</button>
+  <button onclick="moveToSection(12)"> 11</button>
+  <button onclick="moveToSection(13)"> 12</button>
+  <button onclick="moveToSection(14)"> 13</button>
+  <button onclick="moveToSection(15)"> 14</button>
+  <button onclick="moveToSection(16)"> 15</button>
+  <button onclick="moveToSection(17)"> 16</button>
+</div>
+
+</div>
     <div id="altpage">
       <div class="textbox"><h1>PC로 확인 가능합니다.</h1><span>Available on the PC Web</span></div>
+    </div>
     <!-- fullPage.js JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
     <script src="script.js"></script>
@@ -195,5 +216,30 @@
           });
         });
     </script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      new fullpage('#fullpage', {
+      navigation: true,
+      navigationPosition: 'right',
+      scrollingSpeed: 1000,
+      afterLoad: function(origin, destination, direction){
+      var loadedSection = destination.item;
+      var video = loadedSection.querySelector('video');
+      if (video) {
+      video.pause(); // 먼저 비디오를 일시 정지
+      video.currentTime = 0; // 비디오를 처음으로 되감음
+      video.play().catch(error => {
+        // 비디오 재생에 실패하면 콘솔에 오류를 기록
+        console.error('Error playing video:', error);
+      });
+      }
+      }
+      });
+      });
+
+      function moveToSection(sectionNumber) {
+      fullpage_api.moveTo(sectionNumber);
+      }
+      </script>
 </body>
 </html>
