@@ -44,9 +44,13 @@ body, html {
 #section3 {
     background-color: #fdffb6;
 }
-#section7 {
+#section11 .imgbox{ display: flex;overflow: scroll;
 
 }
+#section13 .imgbox{ display: flex;overflow: scroll;
+
+}
+
 
 .hide{color:#ebebeb;}
 /* 모바일 대응 스타일 */
