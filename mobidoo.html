@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>[스테이지] 소스클립 전시 모듈화 방식 데모</title>
+    <script src="https://showcase.sauceclip.com/static/js/SauceClipCollectionLib.js"></script>
+  </head>
+  <body>
+    <header>
+      <section class="left">
+        <a href="https://sauce.im">
+          <img
+            alt="logo"
+            src="https://sauce.im/_next/image?url=%2Fimages%2Flogos%2Forange_logo.png&w=256&q=75"
+            width="120"
+            height="30"
+            decoding="async"
+            loading="lazy"
+            style="color:transparent"
+          />
+        </a>
+      </section>
+      <section class="center"></section>
+      <section class="right">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+    </header>
+    <main>
+      <!-- STEP1. 태그 추가 -->
+      <div id="sauce_clip_curation_1"></div>
+    </main>
+
+  </body>
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 32px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+      width: 100%;
+      height: 98px;
+    }
+    header .right ul {
+      list-style: none;
+      display: flex;
+      gap: 8px;
+    }
+    header .right ul li {
+      width: 60px;
+      height: 30px;
+      border-radius: 8px;
+      background-color: #e6e6e6;
+    }
+    main {
+      width: 100%;
+    }
+  </style>
+  <script>
+  window.SauceClipCollectionLib.setInit({ partnerId: "murocorp" });
+  window.SauceClipCollectionLib.loadCuration({ curationId: "167", elementId: "sauce_clip_curation_1" });
+  window.SauceClipCollectionLib.setClipPlayerOpenType('redirect');
+
+</script>
+</html>
